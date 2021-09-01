@@ -1,0 +1,7 @@
+{
+  "name": "com.aarquiesolutions.zipproject",
+  "displayName": "Zip Project",
+  "version": "1.0.0",
+  "description": "Editor tool that archives the project into a .zip folder.",
+  "type": "tool"
+}
