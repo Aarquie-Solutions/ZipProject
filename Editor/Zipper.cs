@@ -6,6 +6,7 @@ using System;
 
 namespace AarquieSolutions
 {
+    #if UNITY_EDITOR
     public class Zipper : EditorWindow
     {
         private const string AssetsSubDirectory = "Assets";
@@ -75,4 +76,5 @@ namespace AarquieSolutions
             }
         }
     }
+    #endif
 }
