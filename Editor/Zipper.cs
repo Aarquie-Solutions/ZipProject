@@ -1,12 +1,13 @@
+#if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
 using System.IO;
 using System.IO.Compression;
 using System;
+using UnityEditor.Callbacks;
 
 namespace AarquieSolutions
 {
-    #if UNITY_EDITOR
     public class Zipper : EditorWindow
     {
         private const string AssetsSubDirectory = "Assets";
@@ -75,6 +76,14 @@ namespace AarquieSolutions
                 ZipProject(fileName);
             }
         }
+
+        [PostProcessBuildAttribute(1)]
+        private static void ZipBuild(BuildTarget buildTarget, string pathToBuild)
+        {
+            string path = pathToBuild.Replace($"/{Application.productName}.exe","");
+            ZipFile.CreateFromDirectory(path, $"{tempPath}/Build{buildTarget}.zip");
+            Debug.Log($"Created zip archive of build. File location:{tempPath}");
+        }
     }
-    #endif
 }
+#endif
