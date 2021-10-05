@@ -80,8 +80,15 @@ namespace AarquieSolutions
         [PostProcessBuildAttribute(1)]
         private static void ZipBuild(BuildTarget buildTarget, string pathToBuild)
         {
-            string path = pathToBuild.Replace($"/{Application.productName}.exe","");
-            ZipFile.CreateFromDirectory(path, $"{tempPath}/Build{buildTarget}.zip");
+            string sourcePath = pathToBuild.Replace($"/{Application.productName}.exe","");
+            string destinationPath = $"{tempPath}/Build{buildTarget}.zip";
+            
+            if (Directory.Exists(destinationPath))
+            {
+                Directory.Delete(destinationPath, true);
+            }
+            
+            ZipFile.CreateFromDirectory(sourcePath, destinationPath);
             Debug.Log($"Created zip archive of build. File location:{tempPath}");
         }
     }
