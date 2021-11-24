@@ -1,4 +1,3 @@
-#if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
 using System.IO;
@@ -83,9 +82,9 @@ namespace AarquieSolutions
             string sourcePath = pathToBuild.Replace($"/{Application.productName}.exe","");
             string destinationPath = $"{tempPath}/Build{buildTarget}.zip";
             
-            if (Directory.Exists(destinationPath))
+            if (File.Exists(destinationPath))
             {
-                Directory.Delete(destinationPath, true);
+                File.Delete(destinationPath);
             }
             
             ZipFile.CreateFromDirectory(sourcePath, destinationPath);
@@ -93,4 +92,3 @@ namespace AarquieSolutions
         }
     }
 }
-#endif
