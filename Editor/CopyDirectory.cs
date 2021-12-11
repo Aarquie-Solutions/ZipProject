@@ -1,6 +1,6 @@
 using System.IO;
 
-namespace AarquieSolutions
+namespace AarquieSolutions.ZipProjectTool
 {
     public class CopyDirectory
     {

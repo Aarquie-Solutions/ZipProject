@@ -1,6 +1,6 @@
 {
-    "name": "aarquiesolutions.zipproject.editor",
-    "rootNamespace": "",
+    "name": "aarquiesolutions.zipprojecttool.editor",
+    "rootNamespace": "AarquieSolutions.ZipProjectTool",
     "references": [],
     "includePlatforms": [
         "Editor"

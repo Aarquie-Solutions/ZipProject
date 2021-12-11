@@ -5,7 +5,7 @@ using System.IO.Compression;
 using System;
 using UnityEditor.Callbacks;
 
-namespace AarquieSolutions
+namespace AarquieSolutions.ZipProjectTool
 {
     public class Zipper : EditorWindow
     {

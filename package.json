@@ -1,7 +1,7 @@
 {
-  "name": "com.aarquiesolutions.zipproject",
-  "displayName": "Zip Project",
-  "version": "1.0.5",
+  "name": "com.aarquiesolutions.zipprojecttool",
+  "displayName": "Zip Project Tool",
+  "version": "1.0.6",
   "description": "Editor tool that archives the project into a .zip folder.",
   "type": "tool"
 }
